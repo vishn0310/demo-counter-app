@@ -2,6 +2,10 @@ pipeline{
     
     agent any 
     
+     tools { 
+      maven 'MAVEN_HOME' 
+    }
+    
     stages {
         
         stage('Git Checkout'){
@@ -50,7 +54,7 @@ pipeline{
                 
                 script{
                     
-                    withSonarQubeEnv(credentialsId: 'eb6e952b-2459-48e2-bd60-ed505add2692') {
+                    withSonarQubeEnv(credentialsId: '9b9d4d6f-d38c-4b8d-8862-33196e86ec69') {
                         
                         sh 'mvn clean package sonar:sonar'
                     }
@@ -64,7 +68,7 @@ pipeline{
                     
                     script{
                         
-                        waitForQualityGate abortPipeline: false, credentialsId: 'eb6e952b-2459-48e2-bd60-ed505add2692'
+                        waitForQualityGate abortPipeline: false, credentialsId: '9b9d4d6f-d38c-4b8d-8862-33196e86ec69'
                     }
                 }
             }
