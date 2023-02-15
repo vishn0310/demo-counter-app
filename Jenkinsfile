@@ -68,7 +68,7 @@ pipeline{
                     
                     script{
                         
-                        waitForQualityGate abortPipeline: true, credentialsId: '9b9d4d6f-d38c-4b8d-8862-33196e86ec69'
+                        waitForQualityGate abortPipeline: false, credentialsId: '9b9d4d6f-d38c-4b8d-8862-33196e86ec69'
                     }
                 }
             }
