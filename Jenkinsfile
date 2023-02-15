@@ -10,7 +10,7 @@ pipeline{
                 
                 script{
                     
-                    git branch: 'main', url: 'hhttps://github.com/vishn0310/demo-counter-app.git'
+                    git branch: 'main', url: 'https://github.com/vishn0310/demo-counter-app.git'
                 }
             }
         }
